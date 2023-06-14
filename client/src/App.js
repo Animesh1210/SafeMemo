@@ -1,9 +1,8 @@
-import './App.css';
-
+import ListHeader from './components/ListHeader'
 const App = ()=> {
   return (
     <div className="App">
-    <h1>HI</h1>
+    <ListHeader  listName={'Holiday Tick List'}/>
     </div>
   );
 }
