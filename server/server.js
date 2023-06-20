@@ -1,8 +1,16 @@
 const PORT = 3001;
 const express = require("express");
 const app= express();
-app.get('/',(req,res)=>{
-res.send("HELLO")
+const pool= require('./db.js')
+app.get('/todos',async (req,res)=>{
+    try{
+     const todos= await pool.query('SELECT * FROM todos') ;//get all table contents
+      res.json(todos.rows)
+    }
+    catch(err)
+    {
+        console.log(err);
+    }
 })
 
 
