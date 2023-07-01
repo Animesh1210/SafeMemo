@@ -1,7 +1,7 @@
-const ListItem = ()=> {
+const ListItem = ({task})=> {
     return (
       <div className="ListItem">
-      <h1>HI</h1>
+      <p>{task.title} </p>
       </div>
     );
   }
