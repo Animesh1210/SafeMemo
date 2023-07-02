@@ -18,7 +18,7 @@ const getData= async ()=>
   }
   useEffect(()=>getData,[])
   console.log(tasks)
-  const sortedTasks = tasks?.sort((a,b) => a.date- b.date)
+  const sortedTasks = tasks?.sort((a,b) => a.date- b.date) //saved tasks sorted by date into an array
 
 
   return (
